@@ -24,7 +24,7 @@ p {
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px; /* الأساس اللي بيتبني عليه الـ rem */
+  /* font-size: 16px; الأساس اللي بيتبني عليه الـ rem */
 }
 
 a {
@@ -295,6 +295,580 @@ header nav .form i {
 }
 /* End Design */
 
+/* Start Portfolio */
+.portfolio .portfolio-all {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .portfolio-all p {
+  padding: 10px;
+  line-height: 1.15;
+}
+.portfolio .portfolio-all p:first-child {
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.portfolio-images .img {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-images .img:hover .caption {
+  bottom: 0;
+}
+.portfolio-images .img:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio-images .img img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.portfolio-images .img .caption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: 0.3s;
+  bottom: -100%;
+}
+.portfolio-images .img .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio-images .img .caption p {
+  color: var(--main-color);
+}
+.portfolio .more {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-transform: uppercase;
+}
+/* End Portfolio */
+
+/* Start Video */
+/* .video .video-box (h2 / p / a) */
+.video {
+  position: relative;
+}
+.video video {
+  max-width: 100%;
+}
+.video .video-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  background-color: var(--transparent-color);
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  gap: 20px;
+}
+.video .video-box h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.video .video-box p {
+  font-weight: normal;
+}
+.video .video-box button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  margin: 5px auto;
+  text-transform: uppercase;
+}
+/* End Video */
+/* Start About */
+section.about {
+  padding-bottom: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  max-width: 100%;
+}
+/* End About */
+/* Start Stats */
+section.stats {
+  background-image: url(/images/stats.png);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+section.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+section.stats .stats-flex {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--transparent-color);
+  padding: 50px 0;
+  z-index: 10;
+}
+section.stats .stats-flex .item {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: white;
+  z-index: 5;
+}
+section.stats .stats-flex .item i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+}
+section.stats .stats-flex .item .number {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+section.stats .stats-flex .item p {
+  font-size: 14px;
+}
+/* End Stats */
+
+/* Start Skills */
+section.skills {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section.skills .container {
+  display: flex;
+  justify-content: space-between;
+}
+section.skills .container h3 {
+  margin: 0 0 30px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+section.skills .container h3 + p {
+  color: #777;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 60px;
+}
+section.skills .skills-flex {
+  display: flex;
+  flex-direction: column;
+}
+section.skills .skills-flex .image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+section.skills .container .box1 {
+  flex-basis: 45%;
+}
+section.skills .container .box2 {
+  flex-basis: 45%;
+}
+section.skills .container .box1 .row {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+section.skills .container .box1 .row .row-text {
+  line-height: 1.8;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+section.skills .container .box1 .row .row-text p {
+  line-height: 1.8;
+}
+section.skills .container .box1 .row .row-text .worker {
+  color: #777;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+section.skills .container .box1 .circles {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+section.skills .container .box1 .circles .circ {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+section.skills .container .box1 .circles .circ:nth-child(2) {
+  background-color: var(--main-color);
+}
+section.skills .container .box2 .prog-holder {
+  margin-bottom: 40px;
+}
+section.skills .container .box2 .prog-holder h4 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+section.skills .container .box2 .bar {
+  background-color: #dedadc;
+  height: 30px;
+}
+section.skills .container .box2 .bar span {
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+section.skills .container .box2 .bar span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -40px;
+  right: -20px;
+  padding: 4px 0;
+  width: 40px;
+  text-align: center;
+  border-radius: 4px;
+}
+section.skills .container .box2 .bar span::after {
+  content: "";
+  position: absolute;
+  border: 8px solid;
+  border-color: black transparent transparent;
+  right: -8px;
+  top: -12px;
+}
+section.skills .container .box2 .bar .span-90  {
+  width: 90%;
+}
+section.skills .container .box2 .bar .span-85 {
+  width: 85%;
+}
+section.skills .container .box2 .bar .span-80 {
+  width: 80%;
+}
+/* End Skills */
+
+/* Start Quote */
+.quote {
+  background-image: url(/images/quote.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 75%);
+}
+.quote .container {
+  position: relative;
+}
+.quote q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+.quote q::before {
+  font-family: 'Font Awesome 5 Free';
+  content: \f10d;
+}
+.quote q::after {
+  font-family: 'Font Awesome 5 Free';
+  content: \f10e;
+}
+/* End Quote */
+
+/* Start Pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing-cell {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.pricing-cell .head {
+  padding: 40px 20px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing-cell .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing-cell span {
+  font-size: 60px;
+  font-weight: bold;
+}
+.pricing-cell .head span::after {
+  content: "/Mo";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+.pricing-cell .head span::before {
+  content: "$";
+  font-size: 25px;
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+  font-weight: normal;
+}
+.pricing-cell ul {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing-cell ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing-cell ul li:not(:last-child)::after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing-cell .foot a {
+  display: block;
+  padding: 20px 20px;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing-text {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+/* End Pricing */
+
+/* Start Subscribe */
+section.subscribe {
+  background-image: url(/images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+}
+.subscribe .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.subscribe form {
+  display: flex;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+.subscribe form i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+.subscribe form input[type="email"] {
+  border: 1px solid white;
+  border-right: none;
+  background: none;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  width: calc(100%-130px);
+  font-size: 16px;
+}
+.subscribe form input[type="submit"] {
+  width: 130px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-left: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"] {
+  outline: none;
+}
+.subscribe form ::placeholder {
+  color: white;
+}
+.subscribe p {
+  line-height: 2;
+  margin-left: 50px;
+}
+/* End Subscribe */
+
+/* Start Contact */
+section.contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+
+}
+.contact .content form {
+  flex-basis: 70%;
+}
+.contact .content form .main-input {
+  padding: 20px;
+  display: block;
+  border: 1px solid #CCC;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.contact .content form .main-input:focus {
+  outline: none;
+}
+.contact .content form textarea.main-input {
+  height: 200px;
+}
+.contact .content form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact .content .info {
+  flex-basis: 25%;
+}
+.contact .content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.contact .content .info .phone {
+  display: block;
+  color: #777;
+  margin-bottom: 10px;
+}
+.contact .content .info h4:last-of-type {
+  margin-top: 90px;
+}
+.contact .content .info address {
+  color: #777;
+  line-height: 2;
+}
+/* End Contact */
+
+/* Start Footer */
+section.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(/images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.footer .container {
+  position: relative;
+}
+oter img {
+  margin-bottom: 20px;
+}
+.footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+.footer .copyright {
+  margin-top: 60px;
+}
+.footer .copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
+
 @media (max-width: 768px) {
   .landing .landing-text {
     width: 100%;
@@ -334,6 +908,48 @@ header nav .form i {
   .design .image {
     display: none;
   }
+  .about img {
+  bottom: -60px;
+  margin-top: -60px;
+  }
+  section.stats .stats-flex .item {
+    flex-basis: 100%;
+  }
+  section.stats .stats-flex .item:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+  section.skills .container .box1 .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact .content {
+    flex-direction: column;
+  }
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+  }
+  .contact .content .info h4:last-of-type {
+    margin-top: 30px;
+  }
+  .contact .content address {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  section.skills .container {
+    flex-direction: column;
+  }
+  section.skills .container .box1 .row .row-text:last-child {
+    margin-bottom: 0;
+  }
+  .subscribe .container {
+    flex-direction: column;
+  }
+  .subscribe p {
+    margin: 30px 0 0;
+  }
 }
 
 /* Small */
@@ -341,11 +957,25 @@ header nav .form i {
   .container {
     width: 750px;
   }
+  .portfolio-images .img {
+    flex-basis: 50%;
+  }
+  section.stats .stats-flex .item {
+    flex-basis: 50%;
+  }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 970px;
+  }
+  section.stats .stats-flex .item {
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 1199px) {
+  .portfolio-images .img {
+    flex-basis: 25%;
   }
 }
 /* Large */
